@@ -15,9 +15,9 @@ from sklearn.model_selection import train_test_split
 import SVM 
 
 
-classifier = pickle.load(open('D:\Disease_Project\RiskAssess\Models\diabetes-prediction-rfc-model.pkl', 'rb'))
-model = pickle.load(open('D:\Disease_Project\RiskAssess\Models\model.pkl', 'rb'))
-model1 = pickle.load(open('D:\Disease_Project\RiskAssess\Models\model1.pkl', 'rb'))
+classifier = pickle.load(open('D:\MajorProject\MajorProject\RiskAssess\Models\diabetes-prediction-rfc-model.pkl', 'rb'))
+model = pickle.load(open('D:\MajorProject\MajorProject\RiskAssess\Models\model.pkl', 'rb'))
+model1 = pickle.load(open('D:\MajorProject\MajorProject\RiskAssess\Models\model1.pkl', 'rb'))
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
@@ -138,7 +138,7 @@ def liver():
 def ValuePred(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     if(size==7):
-        loaded_model = joblib.load('D:\Disease_Project\RiskAssess\Models\liver_model.pkl')
+        loaded_model = joblib.load('D:\MajorProject\MajorProject\RiskAssess\Models\liver_model.pkl')
         result = loaded_model.predict(to_predict)
     return result[0]
 

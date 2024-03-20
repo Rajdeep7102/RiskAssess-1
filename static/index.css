@@ -135,17 +135,62 @@ nav {
         margin-bottom: 1rem;
     }
 
+@keyframes boltAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
 .fa-bolt {
-    color: #5a5a5a;
+    color: #87CEFA;
+    animation: boltAnimation 0.5s infinite alternate; 
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(173, 216, 230, 0.7); 
+    }
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(173, 216, 230, 0); 
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(173, 216, 230, 0); 
+    }
 }
 
 .fa-lock {
-    color: #5a5a5a;
+    color: #66aac1;
+    animation: pulseAnimation 1.5s infinite;
 }
 
-.fa-check-square {
-    color: #5a5a5a;
+@keyframes checkSquareAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
+
+
+.fa-check-square {
+    color: #20b2aa; 
+    animation: checkSquareAnimation 0.5s infinite alternate; 
+}
+
+
 
 .fa-bolt, .fa-lock, .fa-check-square {
     font-size: 4em;
@@ -266,3 +311,5 @@ footer a {
         margin-top: 7rem;
     }
 }
+
+
