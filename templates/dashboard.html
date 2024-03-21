@@ -11,60 +11,44 @@
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link rel="stylesheet" type="text/css" href="static/css/aboutus.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
 
-    <style>
-        body {
-    padding-top: 3.5rem;
-}
-
-nav {
-    font-family: sans-serif;
-}
-
-.navbar-brand {
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-    </style>
 
 </head>
 <body>
     <form id="form1">
         <header>
             <!--Navigation Bar-->
-			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" href="#"><b>RISK ASSESS</b></a>
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                <a class="navbar-brand" href="#"><b class="logo">Risk Assess</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/dashboard">Get Started</a>
+                        <a class="navitems" href="/dashboard">Get Started</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/disindex">Disease Index</a>
+                      <a class="navitems" href="/disindex">Disease Index</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cancer">Breast Cancer</a>
+                        <a class="navitems" href="/cancer">Breast Cancer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/diabetes">Diabetes</a>
+                        <a class="navitems" href="/diabetes">Diabetes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/heart">Heart Disease</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="/kidney">Kidney Disease</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/liver">Liver Disease</a>
+                        <a class="navitems" href="/heart">Heart Disease</a>
                     </li>
                     <li class="nav-item">
-		                <a class="nav-link" href="#">|</a>
+                        <a class="navitems" href="/liver">Liver Disease</a>
+                    </li>
+                    <li class="nav-item">
+		                <a class="navitems" href="#">|</a>
 		            </li>
                     <li class="nav-item">
-		                <a class="nav-link" href="/logout">Logout</a>
+		                <a class="navitems" href="/logout">Logout</a>
 		            </li>
                     </ul>
                 </div>
@@ -103,17 +87,12 @@ nav {
     <br>
     <div class="row">
       <div class="col-md-4">
-        <h2>4. Kidney Disease</h2>
-        <p>Navigate to the "Kidney Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
-
-      </div>
-      <div class="col-md-4">
-        <h2>5. Liver Disease </h2>
+        <h2>4. Liver Disease </h2>
         <p>Navigate to the "Liver Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
 
       </div>
       <div class="col-md-4">
-        <h2>6. Disease Index</h2>
+        <h2>5. Disease Index</h2>
         <p>Navigate to the "Disease Index" section and gain in-depth information about each of these diseases.</p>
 
       </div>
@@ -123,9 +102,7 @@ nav {
   </div>
 </main>
 
-<footer class="container">
-  <p>&copy;riskassess. All Rights Reserved</p>
-</footer>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
 
