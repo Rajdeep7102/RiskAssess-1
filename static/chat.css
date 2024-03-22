@@ -1,0 +1,52 @@
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure the chat button is on top of other elements */
+  }
+  
+  #chatbot-button {
+    background-color: transparent; /* Remove button color */
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%; /* Making the button round */
+    width: 60px; /* Set width */
+    height: 60px; /* Set height */
+    overflow: hidden; /* Ensure the image stays within the button */
+    transition: transform 0.3s ease; /* Adding transition for smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Add shadow for depth */
+    outline: none; /* Remove the outline on click */
+    background-color: rgb(255, 255, 255);
+  }
+  
+  
+  #chatbot-button img {
+    width: 100%; /* Make the image fill the button */
+    height: 100%; /* Make the image fill the button */
+    border-radius: 60%; /* Make the image round */
+    transition: transform 0.3s ease; /* Adding transition for smooth hover effect */
+  }
+  
+  #chatbot-frame {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Add shadow for depth */
+    background-color: #f9f9f9; /* Chatbox background color */
+  }
+  
+  #chatbot-frame.open {
+    display: block;
+  }
+
+  #chatbot-button:hover {
+    transform: scale(1.1); /* Scale up slightly on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1); /* Add hover effect */
+  }
+  

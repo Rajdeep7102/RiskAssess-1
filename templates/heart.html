@@ -7,6 +7,7 @@
     <title>RiskAssess | Diabetes Prediction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index1.css') }}">
+    <link rel="stylesheet" href="../static/chat.css">
 </head>
 <!-- <style>
     .form-container{
@@ -153,9 +154,16 @@
         </div>
     </div>
 
+    <div id="chatbot-container">
+        <button id="chatbot-button">
+          <img src="{{ url_for('static', filename='robot.png') }}" alt="Chatbot Image">
+        </button>
+        <iframe id="chatbot-frame" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9e3957a0-9780-494f-88af-d91841ca1db7"></iframe>
+      </div>
+
 
     </div>
-
+    <script src="../static/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

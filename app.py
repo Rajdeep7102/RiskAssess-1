@@ -15,9 +15,9 @@ from sklearn.model_selection import train_test_split
 import SVM 
 
 
-classifier = pickle.load(open('D:\MajorProject\MajorProject\RiskAssess\Models\diabetes-prediction-rfc-model.pkl', 'rb'))
-model = pickle.load(open('D:\MajorProject\MajorProject\RiskAssess\Models\model.pkl', 'rb'))
-model1 = pickle.load(open('D:\MajorProject\MajorProject\RiskAssess\Models\model1.pkl', 'rb'))
+classifier = pickle.load(open('D:\Disease Project\RiskAssess\Models\diabetes-prediction-rfc-model.pkl', 'rb'))
+model = pickle.load(open('D:\Disease Project\RiskAssess\Models\model.pkl', 'rb'))
+model1 = pickle.load(open('D:\Disease Project\RiskAssess\Models\model1.pkl', 'rb'))
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
@@ -97,6 +97,25 @@ def signup():
     return render_template('signup.html', form=form)
 
 
+@app.route('/Home')
+def Home():
+    return render_template('Home.html')
+
+@app.route('/Home', methods=['POST'])
+def Home_Value():
+    global uemail
+    uemail = request.form['uemail']
+    return render_template('Main.html')
+
+@app.route('/Form')
+def Form():
+    if uemail == "": return render_template('Home.html')
+    else: return render_template('Form.html')
+
+@app.route('/Chatbot')
+def Chatbot():
+    if uemail == "": return render_template('Home.html')
+    else: return render_template('Chatbot.html')
 
 @app.route("/dashboard")
 # @login_required
@@ -127,7 +146,6 @@ def diabetes():
 def heart():
     return render_template("heart.html")
 
-
 @app.route("/liver")
 # @login_required
 def liver():
@@ -138,7 +156,7 @@ def liver():
 def ValuePred(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     if(size==7):
-        loaded_model = joblib.load('D:\MajorProject\MajorProject\RiskAssess\Models\liver_model.pkl')
+        loaded_model = joblib.load('D:\Disease Project\RiskAssess\Models\liver_model.pkl')
         result = loaded_model.predict(to_predict)
     return result[0]
 
@@ -270,6 +288,9 @@ def predictheart():
     return render_template('heart_result.html', prediction_text='Patient  {}'.format(speech))
 
 
+############################################################################################################
+
+   
 ############################################################################################################
 
 if __name__ == "__main__":
