@@ -2,7 +2,7 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}
-RiskAssess | Sign Up
+DiagnoWise | Sign Up
 {% endblock %}
 
 {% block styles %}
@@ -15,7 +15,7 @@ RiskAssess | Sign Up
 <div class="container">
 
   <form class="form-signin" method="POST" action="/signup">
-    <h1 style="text-align:center; text-size:30px">RiskAssess</h1>
+    <h1 style="text-align:center;">DiagnoWise</h1>
     <p style="text-align:center">Create Account</p>
     {{ form.hidden_tag() }}
     {{ wtf.form_field(form.username) }}

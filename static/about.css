@@ -11,6 +11,11 @@ body {
     background-color: #fbf6e3;
 }
 
+.logo-img{
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 nav {
   font-family: "NTR", sans-serif;
   background-color: #0a0a0a;
@@ -80,7 +85,7 @@ nav {
   top: 5em;
   padding-bottom: 0;
   margin-bottom: 4em;
-  
+  gap: 20px;
 }
 
 .burger {
@@ -96,4 +101,22 @@ footer {
   width: 100%;
   position: fixed;
 }
+.custom-container {
+  border: 2px solid #ccc; /* Border */
+  border-radius: 10px; /* Border Radius */
+  padding: 20px; /* Padding */
+  margin-bottom: 20px; /* Margin bottom */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: box-shadow 0.3s; /* Transition */
+  position: relative; /* Position for absolute elements */
+}
 
+.custom-container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box Shadow */
+  transform: translateY(-5px); /* Transform */
+}
+
+p{
+  font-size: 1.3rem;
+}

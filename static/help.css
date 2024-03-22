@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
     background-color: #fbf6e3;
 }
+.logo-img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
 
 nav {
     font-family: "NTR", sans-serif;
