@@ -6,7 +6,7 @@ body {
     padding-bottom: 3rem;
     color: #5a5a5a;
     overflow-x: hidden;
-    
+    background-color: #fbf6e3;
 }
 
 nav {
@@ -17,9 +17,15 @@ nav {
 
 .navbar{
     margin: 0.5rem;
-    background-color: whitesmoke;
+    background-color:#ffffff;
     border: 3px black solid;
 }
+
+.logo-img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
 .logo{
     font-size: 1.7rem;
     font-weight: 800;
@@ -262,6 +268,11 @@ footer a {
     position: center;
     padding: 15px;
     margin-top: 10px;
+    /* background-color: #fbf6e3; */
+}
+
+.form-cont{
+    background-color: #fbf6e3;
 }
 
 /* Add border to form inputs */
@@ -271,7 +282,7 @@ footer a {
     padding: 5px; /* Add padding inside form inputs */
     font-size: 16px; /* Increase font size for better readability */
     color: #000000; /* Input text color */
-    background-color: #f9f9f9; /* Light gray background color */
+    background-color: #ffffff; /* Light gray background color */
     transition: all 0.3s ease; /* Smooth transition effect */
 }
 
